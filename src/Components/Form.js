@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import '../Styles/General.css';
 
+//form that lets user to enter their search term
 class Form extends Component{
 
     render(){
