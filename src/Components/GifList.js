@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import GifCard from './GifCard.js';
 
+//the list of all gifs that would be displayed in the app
 class GifList extends Component{
 
     render(){
