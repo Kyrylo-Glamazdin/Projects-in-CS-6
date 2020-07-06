@@ -3,6 +3,7 @@ import axios from 'axios';
 import Form from './Components/Form.js';
 import GifList from './Components/GifList.js';
 import Header from './Components/Header.js';
+import './Styles/General.css';
 
 class App extends Component{
   constructor(){
@@ -78,10 +79,20 @@ class App extends Component{
     return (
       <div>
         <Header/>
-        <button onClick={this.loadTrendingGifs}>Trending</button>
-        <Form handleChange={this.handleFormChange} handleSubmit={this.loadSearchResults}/>
-        <button onClick={this.loadRandomGif}>Random Gif</button>
-        <GifList gifs={this.state.gifSearchResult}/>
+        <div className="nav-section">
+          <div className="nav-item">
+            <button className="standard-button" onClick={this.loadTrendingGifs}>Trending</button>
+          </div>
+          <div className="nav-item">
+          <Form handleChange={this.handleFormChange} handleSubmit={this.loadSearchResults}/>
+          </div>
+          <div className="nav-item">
+            <button className="standard-button" onClick={this.loadRandomGif}>Random Gif</button>
+          </div>
+        </div>
+        <div className="gif-container">
+          <GifList gifs={this.state.gifSearchResult}/>
+        </div>
       </div>
     );
   }
